@@ -1,10 +1,9 @@
 <?php
-	class Logic {
-		public function test(){
-			return "TESTING DATA";
-		}
-	}
+	include 'LoginData.php';
 
-	$test = new Logic();
-	$test.test();
+	$loginData = new LoginData();
+	$loginData->email = $_POST['email'];
+	$loginData->password = $_POST['password'];
+
+	$loginData->verify();
 ?>
